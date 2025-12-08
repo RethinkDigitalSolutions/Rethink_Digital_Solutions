@@ -18,7 +18,9 @@ const ContactHero = () => {
   const headerRef = useRef(null);
 
   // backend API
-  const API_BASE_URL = 'https://subintentionally-skint-cayden.ngrok-free.dev';
+
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 
   useEffect(() => {
     setIsVisible(true);
@@ -42,7 +44,7 @@ const ContactHero = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/rcontact/save`, {
+      const response = await fetch(API_BASE_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
