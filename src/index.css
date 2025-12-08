@@ -1,0 +1,137 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'Felix';
+  src: url('./assets/fonts/felix-felix-regular-400.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DirtyPunk';
+  src: url('./assets/fonts/dirty-punk.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Milker';
+  src: url('./assets/fonts/Milker.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gondens';
+  src: url('./assets/fonts/Gondens.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RMX';
+  src: url('./assets/fonts/RMX.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Balinera';
+  src: url('./assets/fonts/Balinera.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body{
+  background-color: black;
+  color: white;
+  /* cursor: url('/cursor.png') 2 2, auto; */
+}
+/* .hand{
+  cursor: url('/click.png') 2 2, auto;
+} */
+/* GLOBAL CSS (e.g., globals.css) */
+
+.rethink {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+  transition: color 0.8s ease, transform 0.6s ease;
+  will-change: color, transform;
+}
+
+/* Hover (fills text with gradient or white — depends on your design) */
+.rethink:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .rethink {
+    -webkit-text-stroke: 1.5px #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .rethink {
+    -webkit-text-stroke: 1.2px #fff;
+  }
+}
+
+@media (max-width: 640px) {
+  .rethink {
+    -webkit-text-stroke: 1px #fff;
+    font-size: 1.8rem; /* adjust if needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .rethink {
+    -webkit-text-stroke: 0.8px #fff;
+    letter-spacing: var(--tracking-widest);
+    /* font-size: 1.5rem; */
+  }
+}
+
+
+.rethink:hover {
+  color: #fff;
+  transform: translateX(3%);
+}
+/* Border left-to-right wipe */
+.border-wipe {
+  position: relative;
+}
+.border-wipe::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: white;
+  transition: width 0.4s ease;
+}
+.border-wipe:hover::after {
+  width: 100%;
+}
+
+/* Bottom-to-top background reveal */
+.bg-reveal {
+  position: relative;
+  overflow: hidden;
+    z-index: 1;
+}
+.bg-reveal::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: white;
+  z-index: -1;
+  transition: height 0.5s ease;
+}
+.bg-reveal:hover::before {
+  height: 100%;
+}
+.bg-reveal:hover h1{
+  color: black;
+  position: relative;
+  z-index: 2;   /* stay above background */
+}
