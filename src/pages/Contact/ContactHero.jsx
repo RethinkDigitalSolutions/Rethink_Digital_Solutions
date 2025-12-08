@@ -43,7 +43,7 @@ const API_BASE_URL="https://subintentionally-skint-cayden.ngrok-free.dev/api/rco
     setSubmitStatus(null);
 
     try {
-      const response = await fetch(${API_BASE_URL}, {
+    const response = await fetch(`${API_BASE_URL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
