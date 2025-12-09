@@ -18,7 +18,7 @@ const ContactHero = () => {
   const headerRef = useRef(null);
 
   // backend API
-const API_BASE_URL="https://subintentionally-skint-cayden.ngrok-free.dev/api/rcontact/save";
+const API_BASE_URL="https://recontact.onrender.com/api/rcontact/save";
 
 
   useEffect(() => {

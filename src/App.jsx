@@ -18,7 +18,7 @@ import AiIntegrationSection from "./pages/Services/Service5";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
-const API_BASE_URL = "https://subintentionally-skint-cayden.ngrok-free.dev";
+const API_BASE_URL = "https://recontact.onrender.com";
 
 const AppLayout = () => {
   const location = useLocation();
