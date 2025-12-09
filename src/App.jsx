@@ -18,7 +18,7 @@ import AiIntegrationSection from "./pages/Services/Service5";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
-const API_BASE_URL = "https://recontact.onrender.com";
+const API_BASE_URL = "https://rethinkds.onrender.com";
 
 const AppLayout = () => {
   const location = useLocation();

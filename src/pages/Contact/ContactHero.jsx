@@ -18,7 +18,7 @@ const ContactHero = () => {
   const headerRef = useRef(null);
 
   // backend API
-const API_BASE_URL="https://recontact.onrender.com/api/rcontact/save";
+  const API_BASE_URL = "https://rethinkds.onrender.com/api/rcontact/save";
 
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const API_BASE_URL="https://recontact.onrender.com/api/rcontact/save";
     setSubmitStatus(null);
 
     try {
-    const response = await fetch(`${API_BASE_URL}`, {
+      const response = await fetch(`${API_BASE_URL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -157,8 +157,8 @@ const API_BASE_URL="https://recontact.onrender.com/api/rcontact/save";
               {/* Status Messages */}
               {submitStatus && (
                 <div className={`mb-6 p-4 rounded-xl border animate-fade-in ${submitStatus.type === 'success'
-                    ? 'bg-green-900/20 border-green-500/50 text-green-300'
-                    : 'bg-red-900/20 border-red-500/50 text-red-300'
+                  ? 'bg-green-900/20 border-green-500/50 text-green-300'
+                  : 'bg-red-900/20 border-red-500/50 text-red-300'
                   }`}>
                   <div className="flex items-center gap-2">
                     {submitStatus.type === 'success' ? (
