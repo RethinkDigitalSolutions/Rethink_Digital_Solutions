@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://rethinkdigitalsolutions.in/sitemap.xml 
